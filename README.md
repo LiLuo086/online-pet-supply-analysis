@@ -49,4 +49,14 @@ The dataset contains transactional and reference tables, including:
 
 - **Products**: Product categories and attributes.
 
-- **Regions**: Geographic breakdown.
+- **State_mapping**: Geographic info of each order state.
+
+## Tools & Technologies
+
+- Power BI Desktop
+
+- Power Query (ETL – Extract, Transform, Load)
+
+- DAX (Data Analysis Expressions) for measures and KPIs
+
+- Star Schema modeling principles
