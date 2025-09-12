@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This project analyzes a real-world e-commerce dataset for an online pet supply company.
+This project analyzes a real-world ecommerce dataset for an online pet supply company `Whiskique`.
 Using Power BI, the goal is to uncover insights into sales performance, customer distribution, and product trends.
 
 The project demonstrates skills in:
@@ -13,9 +13,9 @@ The project demonstrates skills in:
 
 - Dashboard creation for executive-level decision making
 
-## Business Questions
+## Project objectives
 
-The analysis answers key questions for the online pet supply company’s executive team:
+The primary business goals of Whiskique are to serve as many customers as possible to increace saled and to reduce the operating cost. The analysis answers key questions for the online pet supply company’s executive team:
 
 ### 1. Sales Performance
 
