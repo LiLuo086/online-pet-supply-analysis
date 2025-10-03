@@ -1,62 +1,81 @@
-# Online Pet Supply Analysis
+# Online Pet Supply – Sales, Profitability & Shipping Optimization Analysis
 
-## Project Overview
+## 1. Project Objectives
 
-This project analyzes a real-world ecommerce dataset for an online pet supply company `Whiskique`.
-Using Power BI, the goal is to uncover insights into sales performance, customer distribution, and product trends.
+The goal of this project was to analyze the sales performance, profitability, customer purchase behavior, and shipping costs of an online pet supply retailer. Specifically, the objectives are:
 
-The project demonstrates skills in:
+- **Sales & Profitability**: Identify top-performing categories, products, and regions driving sales and profit.
 
-- Data cleaning & transformation with Power Query
+- **Cross-Sell Opportunities**: Detect product combinations and bundling opportunities to improve average order value.
 
-- Data modeling & measures using DAX
+- **Shipping Optimization**: Model the impact of tiered shipping discounts on overall shipping costs to uncover cost-saving opportunities.
 
-- Dashboard creation for executive-level decision making
+## 2. Data & Tools
 
-## Project objectives
+- **Dataset**: Online Pet Supply transactional sales dataset (includes product details, sales, profit, quantity, shipping cost, and region).
 
-The primary business goals of Whiskique are to serve as many customers as possible to increace saled and to reduce the operating cost. The analysis answers key questions for the online pet supply company’s executive team:
+- **Tools Used**:
+  - Power BI (data cleaning, modeling, and visualization)
+  - DAX (custom measures, profit %, what-if scenario modeling)
 
-### 1. Sales Performance
+- **Key Metrics**: Total Sales, Profit %, Customer LTV, Shipping Cost (baseline vs optimized).
 
-- What are the total sales, order volume, and average order value?
+## 3. Analysis Process
 
-- How are sales trending over time (daily, monthly, yearly)?
+- **Data Preparation**
 
-### 2. Customer Insights
+  - Cleaned and transformed raw sales data using Power Query.
 
-- Where are customers located?
+  - Removed invalid/negative quantities (representing returned orders).
 
-- What is the ratio of new vs. repeat customers?
+  - Created DAX measures for Profit %, Customer LTV, and What-if Shipping Scenarios.
 
-- Who are the top high-value customers?
+- **Dashboard 1: Sales & Profitability Overview**
 
-### 3. Product Insights
+  - KPI Cards: Total Sales, Total Profit, Profit %, Shipping Cost, and Average Customer Lifetime Value(LTV).
 
-- Which product categories and items generate the most revenue?
+  - Category & Product Analysis: Ranked sales by category and product.
 
-- How do discounts impact sales performance?
+  - Regional Analysis: Sales mapped by region/state to highlight geographic concentration.
 
-- Are there seasonal trends in product demand?
+  - Profitability Tree Map: Profit % contribution by product line.
 
-## Dataset
+  **Insight**: Electronics (44%) and Grooming (35%) are the largest profit drivers, while Food and Disposables dominate total sales. Pet Food, although smaller, is strategically important for repeat purchases.
 
-The dataset contains transactional and reference tables, including:
+- **Dashboard 2: Market Basket & Cross-Sell Opportunities**
 
-- **Sales**: Order details (date, product, customer, revenue, quantity, discount).
+  - Product Selector: Interactive slicer to filter product-specific combinations.
 
-- **Customers**: Demographics and location.
+  - Combination Analysis: Identified which items are frequently purchased together.
 
-- **Products**: Product categories and attributes.
+  - Category-Level Profitability: Sales vs profit % by category.
 
-- **State_mapping**: Geographic info of each order state.
+  **Insight**: Food ($0.54M) and Disposables ($0.43M) lead in sales, but Grooming and Electronics deliver higher margins. Cross-sell opportunities exist in hygiene-related products (Dog & Puppy Pads + Poop Bags) and grooming products (Pet Grooming Brush, Pet Hair Remover).
 
-## Tools & Technologies
+- **Dashboard 3: Shipping Metrics & Cost Optimization**
 
-- Power BI Desktop
+  - KPI Cards: Baseline shipping, Optimized shipping (what-if), and Potential savings.
 
-- Power Query (ETL – Extract, Transform, Load)
+  - What-If Scenario: Tiered discount rates modeled by shipment size.
 
-- DAX (Data Analysis Expressions) for measures and KPIs
+  - Product-Level Impact: Shipping cost by product before vs after optimization.
 
-- Star Schema modeling principles
+  - Category-Level Analysis: Average items per order to assess shipping leverage.
+
+  **Insight**: Tiered shipping discounts can reduce costs by $118K (31%), lowering baseline shipping from $385K to $267K. Pet Food (5.3 items/order) and Cleaning Supplies (4.6 items/order) are the most impactful categories for cost optimization.
+
+## 4. Final Results & Recommendations
+
+- **Sales Growth Drivers**: Electronics and Grooming drive profitability, while Food and Disposables dominate sales volume.
+
+- **Cross-Sell Potential**: Bundling hygiene and grooming products with Food/Disposables can increase order size and profit margins.
+
+- **Shipping Optimization**: Implementing tiered discounts by shipment size yields 31% savings, especially for high-volume categories like Pet Food.
+
+- **Strategic Recommendation**:
+
+  - Focus promotions on cross-sell bundles (Food + Grooming/Disposables).
+
+  - Encourage larger order sizes to maximize shipping discounts.
+
+  - Monitor dependency on a few top-selling products to diversify revenue.
